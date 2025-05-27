@@ -39,17 +39,8 @@
   font-weight: 400;
 }
 
-.preview-box {
-  width: 300px;
-  border: 1px solid #000000;
-}
-
-.preview-box > img {
+#preview {
   width: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.preview-box > img.unloaded {
-  height: 300px;
+  border: 1px solid #000000;
+  image-rendering: pixelated;
 }
