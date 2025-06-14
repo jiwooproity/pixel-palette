@@ -44,3 +44,7 @@
   border: 1px solid #000000;
   image-rendering: pixelated;
 }
+
+#palette-box {
+  display: flex;
+}
