@@ -12,20 +12,21 @@ class Palette {
       let r = this.data[i];
       let g = this.data[i + 1];
       let b = this.data[i + 2];
-      this.colors.add(`rgb(${r}, ${g}, ${b})`);
+      let a = this.data[i + 3];
+      this.colors.add(`rgb(${r}, ${g}, ${b}, ${a})`);
     }
 
     return this;
   }
 
-  // 추출 이미지 DOM 렌더링
+  // 추출 색상 DOM 렌더링
   render() {
     $paletteBox.innerHTML = "";
 
     for (let color of this.colors.values()) {
       const $item = document.createElement("div");
       $item.style.width = `10px`;
-      $item.style.height = `10px`;
+      $item.style.height = `50px`;
       $item.style.backgroundColor = color;
 
       $paletteBox.append($item);
